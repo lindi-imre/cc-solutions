@@ -7,7 +7,7 @@ mark_list = []
 # Ezt a két listát egy dictionary-vel is lehetne helyettesíteni
 
 
-#Ez a függvény add hozzá elemeket a todo_list-hez és a mark_list-hez False értékeket ad hozzá
+#Ez a függvény ad hozzá elemeket a todo_list-hez, a mark_list-hez False értékeket ad hozzá
 def add_todo():
     # global használat: a fenti(3.sor) todo_list nevű változót szeretnénk ezen a függvényen belül használni, ezért kell
     # a global kulcsszó 
@@ -19,7 +19,6 @@ def add_todo():
 
 # az elmentett elemek kiírása
 def list_todos():
-    # global -> add_todo függvényben leírva
     global todo_list
     print("You saved the following to-do items:")
     iterator = 0
@@ -47,7 +46,7 @@ def mark_todo():
 
 
 # Ez a függvény kitörli mindkét listából a megadott indexen lévő elemeket, érdemes átnézni, mivel a törlés nem egyszerű
-# dolog python, mert ha törlünk akkor a következő elemek egy indexel előrébb csúsznak pl:
+# dolog pythonban, mert ha törlünk akkor a következő elemek egy indexel előrébb csúsznak pl:
 # 0 1 2 3 4 5 6 7 -> 3. elem törlése 0 1 2 3 4 5 6 mostmár látszik, hogy a 4ik elem volt az u, most pedig a 3ik lett 
 # f e q w u t w q                    f e q u t w q
 def archive_todos():
