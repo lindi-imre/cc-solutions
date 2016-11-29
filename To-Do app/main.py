@@ -17,6 +17,7 @@ def add_todo():
     mark_list.append(False)
 
 
+# az elmentett elemek kiírása
 def list_todos():
     # global -> add_todo függvényben leírva
     global todo_list
@@ -40,6 +41,7 @@ def mark_todo():
     #Azért hívom meg a print todo-t mert először ki szeretném íratni az összes todo elemet.
     list_todos()
     todo_number = int(input("Which one you want to mark as completed: "))
+    # azért kell todo_number-1, mert a user 1-től látja a sorszámokat, viszont mi 0-tól indexelünk
     todo_number -= 1
     mark_list[todo_number] = True
 
